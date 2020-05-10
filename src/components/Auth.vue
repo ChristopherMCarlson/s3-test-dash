@@ -1,12 +1,10 @@
 // src/components/Auth.vue
 <template>
-  <div class="auth">
-    <sign-up :toggle='toggle' v-if="formState === 'signUp'"></sign-up>
-    <sign-in v-if="formState === 'signIn'"></sign-in>
-    <p v-on:click="toggle" class="toggle">{{ formState === 'signUp' ?
-      'Already have an account? Sign In' : 'Need an account? Sign Up'
-      }}</p>
-  </div>
+    <v-card class="mx-auto my-5" max-width="344" outlined>
+      <sign-up :toggle='toggle' v-if="formState === 'signUp'"></sign-up>
+      <sign-in v-if="formState === 'signIn'"></sign-in>
+      <p v-on:click="toggle" class="toggle mx-5" style="cursor: pointer">{{ formState === 'signUp' ? 'Already have an account? Sign In' : 'Need an account? Sign Up'}}</p>
+    </v-card>
 </template>
 
 <script>
@@ -32,14 +30,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.auth {
-  margin: 0 auto;
-  width: 460px;
-}
-.toggle {
-  cursor: pointer;
-  font-size: 18px;
-}
-</style>

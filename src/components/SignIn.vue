@@ -1,11 +1,11 @@
 // src/components/SignIn.vue
 <template>
-  <div>
+  <div class="px-5">
     <h2>Sign In</h2>
     <v-form @submit="signIn">
       <v-text-field v-model='form.username' />
       <v-text-field type='password' v-model='form.password' />
-      <button v-on:click='signIn' class='button'>Sign In</button>
+      <v-btn v-on:click='signIn' class='button'>Sign In</v-btn>
     </v-form>
   </div>
 </template>

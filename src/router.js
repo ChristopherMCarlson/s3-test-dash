@@ -6,12 +6,14 @@ import Home from './components/Home'
 import Profile from './components/Profile'
 import Auth from './components/Auth'
 import Protected from './components/Protected'
+import newPost from './components/newPost'
 
 const routes = [
   { path: '/', component: Home },
   { path: '/auth', component: Auth },
   { path: '/protected', component: Protected, meta: { requiresAuth: true} },
-  { path: '/profile', component: Profile, meta: { requiresAuth: true} }
+  { path: '/profile', component: Profile, meta: { requiresAuth: true} },
+  { path: '/newPost', component: newPost, meta: { requiresAuth: true} }
 ]
 
 const router = new VueRouter({
